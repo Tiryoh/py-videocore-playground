@@ -39,8 +39,8 @@ if __name__ == '__main__':
         """
         host program
         """
-        list_a = np.arange(16).astype('float32')
-        list_b = np.full(16, 2.0).astype('float32')
+        list_a = np.random.random(16).astype('float32')
+        list_b = np.random.random(16).astype('float32')
 
         # combine arrays
         inp = drv.copy(np.r_[list_a, list_b])
