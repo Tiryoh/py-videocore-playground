@@ -60,10 +60,14 @@ if __name__ == '__main__':
             uniforms=[inp.address, out.address]
         )
 
-        print(' out '.center(80, '='))
+        print(' list_a + list_b gpu_out '.center(80, '='))
         print(out)
 
         cpu_ans = list_a + list_b
         error = cpu_ans - out
-        print(' error '.center(80, '='))
+
+        print(' list_a + list_b cpu_out '.center(80, '='))
+        print(cpu_ans)
+
+        print(' cpu/gpu error '.center(80, '='))
         print(np.abs(error))
